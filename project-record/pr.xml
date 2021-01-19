@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <key>Teste de DAW 2020-2021</key>
+        <title>Teste de DAW 2020-2021</title>
+        <subtitle>Resolução dos 2 exercícios do teste de DAW utilizando Node.js</subtitle>
+        <bdate>20-Jan-2021</bdate>
+        <edate>20-Jan-2021</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84464">
+            <name>Válter Ferreira Picas Carvalho</name>
+            <email>a84464@alunos.uminho.pt</email>
+            <url>https://github.com/wurzy</url>
+        </member>
+    </team>
+    <abstract>
+        <p>
+            Para o exercício 1, 
+        </p>
+        <p>
+            Para o exercício 2,
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/wurzy/DAW2020-Teste">Repositório onde se encontra a resolução teste</link>
+    </deliverables>
+</pr>
