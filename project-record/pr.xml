@@ -27,6 +27,12 @@
             Após isso, foi necessário importar para o MongoDB, na base de dados <b>DAW2020</b>, com a collection <b>batismos</b>, através do seguinte comando: "<u>mongoimport --db DAW2020 --collection batismos --file .\batismos-fixed.json --jsonArray</u>"
         </p>
         <p>
+            Tudo o resto foi realizado consoante os exemplos das aulas práticas, criação de modelos, controladores e respetivos acessos à base de dados.
+        </p>
+        <p>
+            Este servidor fica à escuta na porta 8000, para pedidos de vários utilizadores.
+        </p>
+        <p>
             Para o exercício 2,
         </p>
     </abstract>
