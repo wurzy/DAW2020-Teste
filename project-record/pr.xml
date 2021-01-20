@@ -21,7 +21,7 @@
             Para o exercício 1, foi necessário resolver os seguintes problemas no dataset: acrescentar aspas a todas as chaves; um dos valores de data necessitava de aspas, assim como um dos valores de uma <b>ref</b>; era necessário separar dois objetos por vírgula.
         </p>
         <p>
-            Para facilitar a conversão do JSON para o novo formato, foi utilizado o <i>script</i> <b>substituir.js</b>, presente na página do ex1.
+            Para facilitar a conversão do JSON para o novo formato, foi utilizado o <i>script</i> <b>substituir.js</b>, presente na página do <b>ex1</b>, obtendo assim um novo ficheiro JSON (<b>batismos-fixed.json</b>) com os novos campos indicados no enunciado.
         </p>
         <p>
             Após isso, foi necessário importar para o MongoDB, na base de dados <b>DAW2020</b>, com a collection <b>batismos</b>, através do seguinte comando: "<u>mongoimport --db DAW2020 --collection batismos --file .\batismos-fixed.json --jsonArray</u>"
@@ -30,13 +30,16 @@
             Tudo o resto foi realizado consoante os exemplos das aulas práticas, criação de modelos, controladores e respetivos acessos à base de dados.
         </p>
         <p>
-            Este servidor fica à escuta na porta 8000, para pedidos de vários utilizadores.
+            Este servidor fica à escuta na porta <b>8000</b>, para pedidos de vários utilizadores.
         </p>
         <p>
-            Para o exercício 2, é necessário começar pelo aquecimento. Na alínea 1, são <b>21</b> processos nível 3 pertencentes à descendência da classe 900. Na alínea 2, existem <b>1033</b> entidades. Na alínea 3, existem <b>8</b> processos na descendência de <i>900.10</i>. Na alínea 4, existem <b>5</b> processos relacionados com <i>900.10.505</i>
+            Para o exercício 2, é necessário começar pelo aquecimento. Na alínea 1, são <b>21</b> processos nível 3 pertencentes à descendência da classe 900. Na alínea 2, existem <b>1033</b> entidades. Na alínea 3, existem <b>8</b> processos na descendência de <i>900.10</i>. Na alínea 4, existem <b>5</b> processos relacionados com <i>900.10.505</i>. Todas estas alíneas estão presentes na pasta <b>aquecimento</b>.
+        </p>
+        <p>
+            O restante exercício foi realizado com <link url="https://www.w3schools.com/w3css/w3css_downloads.asp">W3.CSS</link>, seguindo os módulos das aulas. Para ser possível verificar a sua funcionalidade, ele fica à escuta na porta <b>8001</b> para os pedidos do utilizador.
         </p>
     </abstract>
     <deliverables>
-        <link url="https://github.com/wurzy/DAW2020-Teste">Repositório onde se encontra a resolução teste</link>
+        <link url="https://github.com/wurzy/DAW2020-Teste">Repositório onde se encontra a resolução do teste</link>
     </deliverables>
 </pr>
