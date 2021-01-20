@@ -1,0 +1,42 @@
+[
+    {
+        "codigo": "150.10.700",
+        "tipoRel": "http://jcr.di.uminho.pt/m51-clav#eCruzadoCom",
+        "idRel": "eCruzadoCom",
+        "titulo": "Reunião de órgãos deliberativos",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c150.10.700",
+        "status": "A"
+    },
+    {
+        "codigo": "150.10.701",
+        "tipoRel": "http://jcr.di.uminho.pt/m51-clav#eCruzadoCom",
+        "idRel": "eCruzadoCom",
+        "titulo": "Reunião de órgãos executivos",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c150.10.701",
+        "status": "A"
+    },
+    {
+        "codigo": "150.20.300",
+        "tipoRel": "http://jcr.di.uminho.pt/m51-clav#eSintetizadoPor",
+        "idRel": "eSintetizadoPor",
+        "titulo": "Avaliação de atividades",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c150.20.300",
+        "status": "A"
+    },
+    {
+        "codigo": "300.10.005",
+        "tipoRel": "http://jcr.di.uminho.pt/m51-clav#eSucessorDe",
+        "idRel": "eSucessorDe",
+        "titulo": "Transação e transmissão de bens móveis não culturais e contratação de serviços",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c300.10.005",
+        "status": "A"
+    },
+    {
+        "codigo": "500.10.001",
+        "tipoRel": "http://jcr.di.uminho.pt/m51-clav#eSuplementoPara",
+        "idRel": "eSuplementoPara",
+        "titulo": "Realização de auditorias",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c500.10.001",
+        "status": "A"
+    }
+]

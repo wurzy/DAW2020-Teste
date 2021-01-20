@@ -1,0 +1,50 @@
+[
+    {
+        "codigo": "900.10.001",
+        "titulo": "Conceção e realização de atividades ou acontecimentos artísticos",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.001",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.002",
+        "titulo": "Conceção e realização de atividades desportivas ou recreativas",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.002",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.500",
+        "titulo": "Organização e participação em homenagens e cerimónias comemorativas",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.500",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.501",
+        "titulo": "Organização e participação em iniciativas de partilha e debate crítico",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.501",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.502",
+        "titulo": "Organização e participação em iniciativas de prevenção e sensibilização",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.502",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.503",
+        "titulo": "Organização e participação em iniciativas de promoção ou divulgação de produtos e serviços",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.503",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.504",
+        "titulo": "Publicitação de iniciativas e atividades de terceiros",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.504",
+        "status": "A"
+    },
+    {
+        "codigo": "900.10.505",
+        "titulo": "Organização e participação em cerimónia religiosa",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.505",
+        "status": "A"
+    }
+]
