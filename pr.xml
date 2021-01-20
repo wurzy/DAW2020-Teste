@@ -38,13 +38,13 @@
             Na alínea 1, são <b>21</b> processos nível 3 pertencentes à descendência da classe 900, obtidas com a rota GET: <link url="http://clav-api.di.uminho.pt/v2/classes?nivel=3&token=">http://clav-api.di.uminho.pt/v2/classes?nivel=3&token=</link>, com o token obtido anteriormente.
         </p>
         <p>
-            Na alínea 2, existem <b>1033</b> entidades, obtidas através do pedido <link url="http://clav-api.di.uminho.pt/v2/classes?estrutura=lista&token">http://clav-api.di.uminho.pt/v2/classes?estrutura=lista&token</link>.
+            Na alínea 2, existem <b>1033</b> entidades, obtidas através do pedido <link url="http://clav-api.di.uminho.pt/v2/classes?estrutura=lista&token">http://clav-api.di.uminho.pt/v2/classes?estrutura=lista&token</link>, com o token obtido anteriormente.
         </p>
         <p>
-            Na alínea 3, existem <b>8</b> processos na descendência de <i>900.10</i>, obtidos com o pedido GET <link url="http://clav-api.di.uminho.pt/v2/classes/c900.10/descendencia?token=">http://clav-api.di.uminho.pt/v2/classes/c900.10/descendencia?token=</link>.
+            Na alínea 3, existem <b>8</b> processos na descendência de <i>900.10</i>, obtidos com o pedido GET <link url="http://clav-api.di.uminho.pt/v2/classes/c900.10/descendencia?token=">http://clav-api.di.uminho.pt/v2/classes/c900.10/descendencia?token=</link>, utilizando o token obtido no início.
         </p>
         <p>
-            Na alínea 4, existem <b>5</b> processos relacionados com <i>900.10.505</i>. De notar que para realizar a alínea 4, foi necessário utilizar uma rota extra (exposta pelo <b>Swagger</b>), que é a seguinte: <link url="http://clav-api.di.uminho.pt/v2/classes/c900.10.505/procRel?token=">http://clav-api.di.uminho.pt/v2/classes/c900.10.505/procRel?token=</link>.
+            Na alínea 4, existem <b>5</b> processos relacionados com <i>900.10.505</i>. De notar que para realizar a alínea 4, foi necessário utilizar uma rota extra (exposta pelo <b>Swagger</b>), que é a seguinte: <link url="http://clav-api.di.uminho.pt/v2/classes/c900.10.505/procRel?token=">http://clav-api.di.uminho.pt/v2/classes/c900.10.505/procRel?token=</link>, também utilizando o token inicial.
         </p>
         <p>
             Todas estas alíneas do aquecimento foram realizadas utilizando o <b>Postman</b>, pelo que os resultados relevantes para cada alínea foram guardados no ficheiro JSON respetivo, sendo tratados com um pequeno <i>script</i> auxiliar para as respostas. Estes ficheiros (<i>scripts</i> e <b>JSONs</b>) estão presentes na pasta <b>aquecimento</b>, dentro da pasta <b>ex2</b>.
