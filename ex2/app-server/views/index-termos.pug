@@ -12,7 +12,7 @@ block content
         th Termo
         th Título
       each c in dados
-        tr
+        tr(id=c.termo)
           td
             a(href='/codigo/' + c.idClasse)= c.idClasse
           td= c.termo
