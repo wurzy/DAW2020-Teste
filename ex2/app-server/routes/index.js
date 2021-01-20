@@ -18,6 +18,16 @@ function verifyToken(req){
 router.get('/', function(req, res, next) {
   var token = verifyToken(req)
   if(token){
+    res.render("start")
+  }
+  else {
+    res.redirect("/login")
+  }
+});
+
+router.get('/classes', function(req, res, next) {
+  var token = verifyToken(req)
+  if(token){
     axios.get("http://clav-api.di.uminho.pt/v2/classes?nivel=1&token=" + token)
       .then(dados => {
         res.render("index", {dados: dados.data})
