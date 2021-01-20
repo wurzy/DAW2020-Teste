@@ -18,7 +18,13 @@
     </team>
     <abstract>
         <p>
-            Para o exercício 1, 
+            Para o exercício 1, foi necessário resolver os seguintes problemas no dataset: acrescentar aspas a todas as chaves; um dos valores de data necessitava de aspas, assim como um dos valores de uma <b>ref</b>; era necessário separar dois objetos por vírgula.
+        </p>
+        <p>
+            Para facilitar a conversão do JSON para o novo formato, foi utilizado o <i>script</i> <b>substituir.js</b>, presente na página do ex1.
+        </p>
+        <p>
+            Após isso, foi necessário importar para o MongoDB, na base de dados <b>DAW2020</b>, com a collection <b>batismos</b>, através do seguinte comando: "<u>mongoimport --db DAW2020 --collection batismos --file .\batismos-fixed.json --jsonArray</u>"
         </p>
         <p>
             Para o exercício 2,
