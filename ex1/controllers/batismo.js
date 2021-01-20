@@ -9,6 +9,13 @@ module.exports.list = () => {
         .exec()
 }
 
+module.exports.listAll = ()=>{
+    return Batismo
+        .find()
+        .sort({_id:1})
+        .exec()
+}
+
 module.exports.listFields = () => {
     return Batismo
         .find()
@@ -21,6 +28,28 @@ module.exports.lookUp = id => {
     return Batismo
         .findOne({_id: id})
         .exec()
+}
+
+module.exports.lookUpAggregate = () =>{
+    return Batismo
+    .aggregate(
+        [
+            {
+                $group: {
+                    _id: '$date',
+                    total: { "$sum": 1 }
+                }
+            },
+            { 
+                $project: {  
+                    _id: 0,
+                    date: "$_id",
+                    total: 1
+                }
+          }
+        ]
+    )
+    .exec()
 }
 
 module.exports.lookUpYear = year => {

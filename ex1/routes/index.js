@@ -34,6 +34,12 @@ router.get('/batismos/batisado', function(req, res, next) {
     .catch(e => res.status(500).jsonp({error: e}))
 });
 
+router.get('/batismos/stats', function(req, res, next) {
+  Batismo.lookUpAggregate()
+    .then(dados => res.status(200).jsonp(dados))
+    .catch(e => res.status(500).jsonp({error: e}))
+});
+
 router.get('/batismos/progenitores', function(req, res, next) {
   Batismo.listFields()
     .then(dados => res.status(200).jsonp(dados))
