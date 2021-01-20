@@ -66,7 +66,7 @@ router.get('/codigo/:id', function(req,res,next) {
   var token = verifyToken(req)
   axios.get("http://clav-api.di.uminho.pt/v2/classes/c" + req.params.id + "?token=" + token)
     .then(dados => {
-      res.render("classe2", {dados: dados.data})
+      res.render("classe", {dados: dados.data})
     })
     .catch(e => res.render('error', {error: e}))
 })
