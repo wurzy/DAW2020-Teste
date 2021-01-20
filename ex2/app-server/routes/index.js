@@ -33,6 +33,20 @@ router.get('/login', function(req, res, next) {
   res.render("login-form")
 });
 
+router.get('/termos',function(req, res, next) {
+  var token = verifyToken(req)
+  if(token){
+    axios.get("http://clav-api.di.uminho.pt/v2/termosIndice?token=" + token)
+      .then(dados => {
+        res.render("index-termos", {dados: dados.data})
+      })
+      .catch(e => res.render('error', {error: e}))
+  }
+  else {
+    res.render('error', {error: "Não tem acesso à página, realize o login primeiro."})
+  }
+})
+
 router.post('/login', function(req, res) {
   axios.post('http://clav-api.di.uminho.pt/v2/users/login', req.body)
     .then(dados => {
