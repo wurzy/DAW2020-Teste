@@ -23,46 +23,9 @@ module.exports.lookUp = id => {
         .exec()
 }
 
-module.exports.lookUpName = name => {
-    return Batismo
-        .find({title: {$regex: name}})
-        .exec()
-}
-
 module.exports.lookUpYear = year => {
     return Batismo
         .find({date: {$regex: year}})
-        .exec()
-}
-
-module.exports.lookUpAggregate = () => {
-    return Batismo
-        .aggregate(
-            [
-                {
-                    $group: {
-                        _id: '$date',
-                        casamentos: {
-                            $push: {ref: "$ref", title: "$title"}
-                        } 
-                    }
-                },
-                { 
-                    $project: {  
-                        _id: 0,
-                        date: "$_id",
-                        casamentos: 1
-                    }
-              }
-            ]
-        )
-        .exec()
-}
-
-module.exports.lookUpEngaged = year => {
-    return Batismo
-        .find()
-        .select({"title": 1})
         .exec()
 }
 
