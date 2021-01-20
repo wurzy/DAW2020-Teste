@@ -1,17 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var Casamento = require('../controllers/casamentos')
+var Batismo = require('../controllers/batismo')
 
 /* GET home page. */
-router.get('/casamentos', function(req, res, next) {
+router.get('/batismos', function(req, res, next) {
   if(req.query.nome){
-    Casamento.lookUpName(req.query.nome)
+    Batismo.lookUpName(req.query.nome)
     .then(dados => res.status(200).jsonp(dados))
     .catch(e => res.status(500).jsonp({error: e}))
   }
   else if (req.query.ano){
     if(req.query.ano.match(/^[0-9]{4}$/)){
-      Casamento.lookUpYear(req.query.ano)
+      Batismo.lookUpYear(req.query.ano)
         .then(dados => res.status(200).jsonp(dados))
         .catch(e => res.status(500).jsonp({error: e}))
     }
@@ -20,54 +20,42 @@ router.get('/casamentos', function(req, res, next) {
     }
   }
   else if(req.query.byAno && req.query.byAno=="true"){
-    Casamento.lookUpAggregate()
+    Batismo.lookUpAggregate()
     .then(dados => res.status(200).jsonp(dados))
     .catch(e => res.status(500).jsonp({error: e}))
   }
   else {
-    Casamento.listFields()
+    Batismo.list()
     .then(dados => res.status(200).jsonp(dados))
     .catch(e => res.status(500).jsonp({error: e}))
   }
 });
 
-router.get('/casamentos/noivos', function(req, res, next) {
-  Casamento.lookUpEngaged()
+router.get('/batismos/batisado', function(req, res, next) {
+  Batismo.list(req.params.id)
     .then(dados => {
-      var eng = []
-      dados.forEach(par => {
-        var noivos = {}
-        var str = par.title.split(": ")[1].split(" c.c. ")
-        noivos["noivo_1"] = str[0]
-        noivos["noivo_2"] = str[1]
-        noivos["_id"] = par._id
-        eng.push(noivos)
+      var lista = []
+      dados.forEach(batizado => {
+        var title = batizado.title.split(/Registo de batismo n\.º [0-9]+: /)[1].split(/\./)[0]
+        lista.push({nome: title})
+        lista.sort((a,b) => {
+          return a.nome > b.nome ? -1 : 1
+        })
       })
-
-      var sorted = eng.sort(function(a,b){
-        if (a["noivo_1"] < b["noivo_1"]) {  
-          return -1;  
-      } else if (a["noivo_1"] > b["noivo_1"]) {  
-          return 1;  
-      }  
-      else {
-          if (a["noivo_2"] < b["noivo_2"]) {  
-              return 1;  
-          } else if (a["noivo_2"] > b["noivo_2"]) {  
-              return -1;  
-          } else {
-              return 0;
-          }
-      } 
-      })
-      
-      res.status(200).jsonp(sorted)
+      res.status(200).jsonp(lista)
     })
     .catch(e => res.status(500).jsonp({error: e}))
 });
 
-router.get('/casamentos/:id', function(req, res, next) {
-  Casamento.lookUp(req.params.id)
+router.get('/batismos/progenitores', function(req, res, next) {
+  Batismo.listFields()
+    .then(dados => res.status(200).jsonp(dados))
+    .catch(e => res.status(500).jsonp({error: e}))
+});
+
+
+router.get('/batismos/:id', function(req, res, next) {
+  Batismo.lookUp(req.params.id)
     .then(dados => res.status(200).jsonp(dados))
     .catch(e => res.status(500).jsonp({error: e}))
 });
