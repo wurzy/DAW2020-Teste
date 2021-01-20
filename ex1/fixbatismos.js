@@ -1,4 +1,3 @@
-const { json } = require('express')
 var jsonFile = require('./batismos.json')
 var fs = require('fs')
 
@@ -13,7 +12,7 @@ jsonFile.forEach(json => {
 
 fs.writeFileSync('batismos-fixed.json',JSON.stringify(jsonFile, null, 2), err => {
     if(err) console.log("erro: " + err)
-    else console.log("ok, fixed casamentos.json")
+    else console.log("ok, fixed batismos.json")
 })
 
 console.log(jsonFile)
